@@ -1,0 +1,9 @@
+1. download all dependencies to run ts
+  ts-node-dev   - alternative to nodemon
+  ts-node
+  @types/express
+  @types/node
+  typescript
+
+  npm tsc --init
+    initialize ts config
