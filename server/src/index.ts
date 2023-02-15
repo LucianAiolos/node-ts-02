@@ -4,19 +4,18 @@
 import express from 'express'
 import cors from 'cors'
 import * as path from 'path'
-require('dotenv').config()
-
+import colors from 'colors'
+// require('dotenv').config()
+import * as dotenv from 'dotenv'
+dotenv.config()
+const PORT = process.env.PORT
 
 const app = express()
-
-app.get("/test", (req, res) => {
-  res.send('hello from server')
-})
-
-const PORT = process.env.PORT
 // const allowedOrigins = ['http://localhost:3000']
+app.use(cors)
+app.use(express.json())
 
-// app.use(cors)
+app.use('/auth', require('../routes/authRoutes'))
 
 app.listen(PORT, ()=> {
   console.log("listening on ", PORT)
