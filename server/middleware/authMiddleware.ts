@@ -1,6 +1,7 @@
 import jwt from 'jsonwebtoken'
 import asyncHandler from 'express-async-handler'
 import User from '../models/User'
+require('dotenv').config()
 //import model
 
 const protect = asyncHandler(async (req, res, next) => {

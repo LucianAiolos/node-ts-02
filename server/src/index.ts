@@ -7,7 +7,7 @@ import * as path from 'path'
 import colors from 'colors'
 // require('dotenv').config()
 import * as dotenv from 'dotenv'
-import AuthRoutes from '../routes/authRoutes'
+import authRoutes from '../routes/authRoutes'
 dotenv.config()
 const PORT = process.env.PORT
 
