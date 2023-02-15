@@ -7,6 +7,7 @@ import * as path from 'path'
 import colors from 'colors'
 // require('dotenv').config()
 import * as dotenv from 'dotenv'
+import AuthRoutes from '../routes/authRoutes'
 dotenv.config()
 const PORT = process.env.PORT
 
@@ -15,7 +16,7 @@ const app = express()
 app.use(cors)
 app.use(express.json())
 
-app.use('/auth', require('../routes/authRoutes'))
+app.use('/auth', authRoutes)
 
 app.listen(PORT, ()=> {
   console.log("listening on ", PORT)
